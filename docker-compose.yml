@@ -1,5 +1,5 @@
 version: '3'
-services: 
+services: #the services include all hostnames, each host is a container 
     postgres:
         image: 'postgres:latest'
         environment:
@@ -31,7 +31,7 @@ services:
             - PGDATABASE=postgres
             - PGPASSWORD=postgres_password
             - PGPORT=5432
-    client:
+    client: #hostname
         stdin_open: true
         build: 
             dockerfile: Dockerfile.dev
